@@ -6,7 +6,7 @@
   "dependencies": {
     "dotenv-defaults": "^5.0.2"
   },
-  "description": "",
+  "description": "Hash any string into many possible algorithms and get informations about each of them easily.",
   "devDependencies": {
     "electron": "^22.0.0"
   },
