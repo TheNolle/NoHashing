@@ -17,3 +17,45 @@ body {
     font-family: var(--font);
     background-color: var(--background);
 }
+
+main {
+    padding: 0 1rem;
+}
+
+main> section {
+    display: grid;
+    margin-top: 1rem;
+    grid-template-rows: 1.3rem 1rem;
+}
+
+main> section> h3 {
+    cursor: help;
+    font-size: 1rem;
+    margin-block: 0;
+    margin-inline: 0;
+}
+main> section> h3:hover {color: lightcoral}
+
+main> section> input {
+    height: 1rem;
+    border: none;
+    outline: none;
+    overflow:hidden;
+    background: none;
+    color: var(--color);
+    border-bottom: thin double var(--color);
+}
+main> section> input[copy] {cursor: copy}
+main> section> input[copy]:hover {color: lightseagreen}
+
+main> section[input]> h3 {cursor: default}
+main> section[input]> h3:hover {color: var(--color)}
+
+main> section[input]> input {
+    color: var(--background);
+    border: thin solid red;
+    background-color: var(--color);
+    opacity: .75;
+}
+main> section[input]> input[copy] {cursor: text}
+main> section[input]> input[copy]:hover {color: var(--background)}

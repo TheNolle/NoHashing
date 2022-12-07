@@ -34,3 +34,16 @@ contextBridge.exposeInMainWorld('utils', {
     existSync: (file) => require('fs').existsSync(require('path').join(__dirname, 'app', file)),
     openExternal: (url) => shell.openExternal(url)
 })
+
+// Crypto
+contextBridge.exposeInMainWorld('hashing', {
+    md4: (string) => { return require('crypto').createHash('md4').update(string).digest('hex') },
+    md5: (string) => { return require('crypto').createHash('md5').update(string).digest('hex') },
+    ripemd160: (string) => { return require('crypto').createHash('ripemd160').update(string).digest('hex') },
+    sha1: (string) => { return require('crypto').createHash('sha1').update(string).digest('hex') },
+    sha224: (string) => { return require('crypto').createHash('sha224').update(string).digest('hex') },
+    sha256: (string) => { return require('crypto').createHash('sha256').update(string).digest('hex') },
+    sha384: (string) => { return require('crypto').createHash('sha384').update(string).digest('hex') },
+    sha512: (string) => { return require('crypto').createHash('sha512').update(string).digest('hex') },
+    sha512256: (string) => { return require('crypto').createHash('sha512-256').update(string).digest('hex') },
+})
